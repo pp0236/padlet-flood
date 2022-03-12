@@ -13,7 +13,7 @@ $ python3 padlet-flood.py
 ```
 
 ## Usage (windows)
-if you have multi version python installed use "pip<python version>" and "py -<python version>"
+if you have multi version python installed use "pip\<python version\>" and "py -\<python version\>"
 ```
 Click "Code" button and Click "Download ZIP" then extract it
 ```  
