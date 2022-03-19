@@ -21,11 +21,8 @@ def clear():
 	if os.name == "nt": os.system("cls")
 	else: os.system("clear")
 
-def padletSpam(wall_id, id, link):
+def padletSpam(wall_id, link):
 	requests.post("https://padlet.com/api/5/wishes", json={"cid": "c_new7", "wall_id": int(wall_id), "published": True, "author_id": random.randint(0, 9999999999), "width": 200, "body": randomStr(15), "subject": randomStr(20), "attachment": link, "attachment_caption": None, "sort_index": 52310667604992, "created_at": "2022-02-10T07:17:39.351Z", "updated_at": "2022-02-10T07:17:39.351Z", "wish_content": {"is_processed": False, "attachment_props": {"url": "https://www.youtube.com/watch?v=llv9GUa41Pw"}}}, headers={"cookie": "ww_d=ee45c915df791b57e93f6f6170106d93; ww_s=c56272651475fe45612a4cd41bd0a67f; ww_dpr=1; __asc=889db6d417ee27c299547efeb0a; __auc=889db6d417ee27c299547efeb0a; ww_tz=Asia/Bangkok; __cf_bm=QBA6rIUBcDL.bsk5k_MZkvwVqeUNCznG5uBKxzcfOMM-1644477324-0-AdmOm5usYzAQSHNtorkxCasfNfNi5V1cahyISXIaCyuv7QJMJ9qmDg01KGeTQkll0X5LdW7pWeDbjQD7Djwp2xs0Ft9g1QsJRMlHrHGkLzAAMEhIMY1AqHqTR6DDyEEmxzXQd7YpFyo98NFeFbABkcYPkWJL7xLHwcw9LH06hCPsaP77R/u5n2u69+AAYWfX/Q==; ww_p=eU1jaVJLak9MUlFJaDFlYktsNkpjV3A5RjFDdGR5ZVFkOVA4UVpGeENvSitLS3plcXkvUDZvbGRhMEtLTFErWFFMSjZ1YkFjM1VHNkx1K3hvblpQVGRpV3QrRk1rSmhsQ3lCNnZieTQwUFRwMWlzcXpLbGhmdy9FRWt2UmdveXAvZk9kQS9iTGg4WnZ2OGtWZzZ3ZXlPV1haYlFNZmtnT2kvWW4vSVNYLzlsczVDQnZtYk1kOUNxNVZ3RkJUemFFOHZkOUZ3ZysybDFqczBmd2NmaFdzTmNkNjZWMHJCbkdrY1luZ1psRVNZck5ZYlBnMndLSUJqVVhLcEFadUt3VUVha2ZUZm91Vm9CZjEzWUpJWi9nc2JFYVF0aVZJKzlTNENSczlnY1ZST29zcjVIc3M5SGFMR0R2Y2d2MDMvaXRVQTN5ZFZEUXZXelpyNTVHeFZLL1ljbmhhby9hQWhJeGw0M0xHYWxLZnZ2Y3lONGpNNCtDR1dKM0tsYUxuS3U5LS1ISElwTjkyNlU5MmFmKzM2TXhIekNRPT0%3D--3e3ab3493714fc325ff8b365de6deada53e94379", "X-CSRF-Token": "P/yJQ8wNiidkXfhVFBdTvfhUt/esON2JYPiL1Nc8hlnXO0+dAuGZV9QF3lmG3Na7F+9zauTgYCQKnyW4vePHJA=="})
-	# very stupid code
-	if id == (times - 1):
-		print("Done :3")
 
 		
 def main():
@@ -80,15 +77,17 @@ def main():
 
 	res = requests.post("https://padlet.com/api/5/wishes", json={"cid": "c_new7", "wall_id": int(wall_id), "published": True, "author_id": random.randint(0, 9999999999), "width": 200, "body": randomStr(15), "subject": randomStr(20), "attachment": link, "attachment_caption": None, "sort_index": 52310667604992, "created_at": "2022-02-10T07:17:39.351Z", "updated_at": "2022-02-10T07:17:39.351Z", "wish_content": {"is_processed": False, "attachment_props": {"url": "https://www.youtube.com/watch?v=llv9GUa41Pw"}}}, headers={"cookie": "ww_d=ee45c915df791b57e93f6f6170106d93; ww_s=c56272651475fe45612a4cd41bd0a67f; ww_dpr=1; __asc=889db6d417ee27c299547efeb0a; __auc=889db6d417ee27c299547efeb0a; ww_tz=Asia/Bangkok; __cf_bm=QBA6rIUBcDL.bsk5k_MZkvwVqeUNCznG5uBKxzcfOMM-1644477324-0-AdmOm5usYzAQSHNtorkxCasfNfNi5V1cahyISXIaCyuv7QJMJ9qmDg01KGeTQkll0X5LdW7pWeDbjQD7Djwp2xs0Ft9g1QsJRMlHrHGkLzAAMEhIMY1AqHqTR6DDyEEmxzXQd7YpFyo98NFeFbABkcYPkWJL7xLHwcw9LH06hCPsaP77R/u5n2u69+AAYWfX/Q==; ww_p=eU1jaVJLak9MUlFJaDFlYktsNkpjV3A5RjFDdGR5ZVFkOVA4UVpGeENvSitLS3plcXkvUDZvbGRhMEtLTFErWFFMSjZ1YkFjM1VHNkx1K3hvblpQVGRpV3QrRk1rSmhsQ3lCNnZieTQwUFRwMWlzcXpLbGhmdy9FRWt2UmdveXAvZk9kQS9iTGg4WnZ2OGtWZzZ3ZXlPV1haYlFNZmtnT2kvWW4vSVNYLzlsczVDQnZtYk1kOUNxNVZ3RkJUemFFOHZkOUZ3ZysybDFqczBmd2NmaFdzTmNkNjZWMHJCbkdrY1luZ1psRVNZck5ZYlBnMndLSUJqVVhLcEFadUt3VUVha2ZUZm91Vm9CZjEzWUpJWi9nc2JFYVF0aVZJKzlTNENSczlnY1ZST29zcjVIc3M5SGFMR0R2Y2d2MDMvaXRVQTN5ZFZEUXZXelpyNTVHeFZLL1ljbmhhby9hQWhJeGw0M0xHYWxLZnZ2Y3lONGpNNCtDR1dKM0tsYUxuS3U5LS1ISElwTjkyNlU5MmFmKzM2TXhIekNRPT0%3D--3e3ab3493714fc325ff8b365de6deada53e94379", "X-CSRF-Token": "P/yJQ8wNiidkXfhVFBdTvfhUt/esON2JYPiL1Nc8hlnXO0+dAuGZV9QF3lmG3Na7F+9zauTgYCQKnyW4vePHJA=="})
 	if res.status_code == 201:
-		print("trying...")
+		print("  trying...")
 		for i in range(times):
-			executors.submit(padletSpam, int(wall_id), i, link)
+			executors.submit(padletSpam, int(wall_id), link)
+		executors.shutdown(wait=True, cancel_futures=False)
+		print("  done :)")
 	elif res.status_code == 404:
-		print("wall not found.")
+		print("  wall not found.")
 		sys.exit(1)
 	else:
-		print(f"error {res.status_code}. patched?\nresponse={res.text}")
+		print(f"  error {res.status_code}. patched?\nresponse={res.text}")
 		sys.exit(1)
 		
-if __name__ == "__main__" or __name__ == "OBFUSCATED-%entrypointname%":
+if __name__ == "__main__":
 	main()
